@@ -1,22 +1,23 @@
+/*Salvando as cores Principais do Projeto */
 :root {
   --primary-color: #6e0bfa;
   --secundary-color: #202020;
   --hover-color: #fcaf45;
   --background-color: rgba(243, 241, 245, 0.63);
 }
-
+/*Colocando scroll mais suave */
 html {
   scroll-behavior: smooth;
   font-size: 16px;
 }
-
+/*Retirando configuraçoes inicais do navegador e colocando fonte principal*/
 * {
   font-family: "Maven Pro";
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+/*Alinhando tudo de uma vez no body*/
 body {
   display: flex;
   flex-direction: column;
@@ -24,7 +25,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+/*Estilizando Headee*/
 header {
   display: flex;
   flex-direction: row;
@@ -68,6 +69,8 @@ h2 {
   color: rgb(63, 62, 61);
 }
 
+/*Estilizando sessao de introdução*/
+
 .conteiner-introduction {
   display: flex;
   flex-direction: column;
@@ -96,9 +99,15 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  margin: 20px;
+}
+.card-introduction img {
+  min-width: 100%;
+  object-fit: cover;
 }
 
 .card-introduction p {
+  max-width: 100%;
   width: 18.75rem;
   margin: 0.625rem 0;
 }
@@ -108,6 +117,8 @@ h2 {
   color: var(--primary-color);
   margin: 0 0.625rem;
 }
+
+/*Estilizando banner*/
 
 .banner {
   position: relative;
@@ -125,8 +136,10 @@ h2 {
 .banner p {
   position: absolute;
   top: 12.5rem;
-  font-size: 2rem;
+  font-size: 1rem;
 }
+
+/*Estilizando container principal*/
 
 .main-content {
   display: flex;
@@ -149,6 +162,8 @@ h2 {
   color: rgb(63, 62, 61);
 }
 
+/*Estilizando sessao de avaliaçao do aluno*/
+
 .reviews-section {
   display: flex;
   flex-direction: row;
@@ -161,7 +176,7 @@ h2 {
   background-color: var(--secundary-color);
   display: flex;
   flex-direction: column;
-  width: calc(100% / 3);
+  width: calc(70% / 3);
   margin: 0.625rem 1.25rem;
   justify-content: center;
   align-items: center;
@@ -210,6 +225,7 @@ h2 {
   border-radius: 50%;
   margin: 0 1.875rem;
 }
+/*Estilizando sessao de qualificaçoes */
 
 .header-content {
   display: flex;
@@ -258,6 +274,7 @@ h2 {
   border-radius: 1.25rem;
 }
 
+/*Estilizando sessao de contanto*/
 .contact {
   width: 70%;
   margin-top: 12.5rem;
@@ -312,6 +329,7 @@ h2 {
   width: 20rem;
 }
 
+/*Estilizando footer*/
 footer {
   display: flex;
   justify-content: space-evenly;
@@ -336,4 +354,80 @@ footer {
 
 .social-media a:hover {
   color: var(--hover-color);
+}
+
+/*Media queryes para responsividade */
+
+@media (max-width: 1440px) {
+  .card-introduction {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-introduction {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .introduction-content,
+  .main-content,
+  .reviews-section,
+  .qualification-sections {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .conteiner-introduction,
+  .main-content,
+  .contact {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .card-introduction,
+  .reviews-content,
+  .qualification-sections #text-content,
+  .qualification-sections #midia-content {
+    width: 100%;
+  }
+
+  .banner img {
+    width: 90%;
+  }
+
+  .banner p {
+    position: static;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .contact-content,
+  .contact-image {
+    width: 100%;
+    position: static;
+    text-align: center;
+  }
+
+  .contact-image img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .header-list ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    padding: 1rem 0;
+  }
 }

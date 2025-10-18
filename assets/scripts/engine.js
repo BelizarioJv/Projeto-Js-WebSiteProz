@@ -1,3 +1,4 @@
+/*Crinado funçao para criar dinamicamente a lista de caracteristicas e imagem da qualificaçao especifica */
 function chooseQualification() {
   const selectQualification = document.getElementById("qualificationInput");
 
