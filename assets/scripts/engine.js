@@ -16,7 +16,7 @@ function chooseQualification() {
         "Ampla rede de atuação",
         "Reconhecido pelo MEC",
       ],
-      img: "/assets/img/Enfermagem-1-min.webp",
+      img: "assets/img/Enfermagem-1-min.webp",
     },
     desenvolvimento: {
       itens: [
@@ -31,7 +31,7 @@ function chooseQualification() {
         "Habilidades técnicas + soft skills pra se destacar",
         "Reconhecido pelo MEC",
       ],
-      img: "/assets/img/Dev-de-Sistemas-1-min.webp",
+      img: "assets/img/Dev-de-Sistemas-1-min.webp",
     },
   };
 
