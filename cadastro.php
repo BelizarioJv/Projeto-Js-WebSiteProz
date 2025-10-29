@@ -13,10 +13,10 @@ if ($conn->connect_error) {
 
 // Recebe os dados do formulário
 $email = $_POST['emailStudent'];
-$senhaCriptografada = password_hash($_POST['passwordStudent'], PASSWORD_DEFAULT);
+$senhaCriptografada = $_POST['passwordStudent'];
 
 // Prepara a consulta
-$sql = "SELECT * FROM alunos WHERE emailAluno = ? AND senhaAluno = ?";
+$sql = "SELECT * FROM alunos WHERE emailAluno = $email AND senhaAluno = $senha";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $email, $senha);
 $stmt->execute();

@@ -42,24 +42,42 @@ body {
   width: 200px;
 }
 
-.main-content .right-side {
+.main-content #right-side {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main-content .right-side h2 {
+.main-content #right-side h2 {
   color: var(--primary-color);
   margin-bottom: 30px;
 }
 
-.main-content .right-side label {
+.main-content #right-side label {
   color: var(--primary-color);
   font-weight: 900;
 }
 
-.main-content .right-side input {
+.main-content #right-side button {
   color: var(--secundary-color);
+  font-size: 10px;
+  font-weight: 700;
+  border: 2px solid #8707ff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: transparent;
+  max-width: 190px;
+  margin: 20px;
+}
+
+.main-content .right-side button:active {
+  box-shadow: 2px 2px 15px #8707ff inset;
+}
+
+.main-content #right-side input {
+  color: var(--secundary-color);
+  font-size: 10px;
+  font-weight: 700;
   border: 2px solid #8707ff;
   border-radius: 10px;
   padding: 10px 25px;
@@ -71,3 +89,4 @@ body {
 .main-content .right-side input:active {
   box-shadow: 2px 2px 15px #8707ff inset;
 }
+

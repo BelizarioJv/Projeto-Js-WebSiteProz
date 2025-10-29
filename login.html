@@ -19,33 +19,12 @@
       <div class="left-side">
         <img src="assets/img/prozLogo.png" alt="logo proz" />
       </div>
-      <div class="right-side">
-        <h2>Entre Agora</h2>
-        <div class="forms">
-          <!--formulario para entrada de dados do usuario-->
-          <form method="POST" action="cadastro.php">
-            <!--formulario email-->
-            <label for="emailStudent">Email: </label>
-            <input
-              type="text"
-              name="emailStudent"
-              id="emailStudent"
-              placeholder="Digite seu email" />
-
-            <br />
-
-            <!--formulario email-->
-            <label for="passwordStudent">Senha:</label>
-            <input
-              type="password"
-              name="passwordStudent"
-              id="passwordStudent"
-              placeholder="Digite sua senha" />
-
-            <input type="submit" value="entrar" name="enviar" />
-          </form>
-        </div>
+      <div id="right-side">
+       <button id="entrar">Entrar</button>
+       <button id="registrar">Registrar</button>
       </div>
     </main>
+
+    <script src="assets/scripts/login.js"></script>
   </body>
 </html>
