@@ -6,101 +6,136 @@ const rightSide = document.getElementById("right-side");
 // FORMULÁRIO DE LOGIN
 
 function getInUser() {
-    getInStudent.addEventListener('click', () => {
-        rightSide.innerHTML = "";
+  getInStudent.addEventListener("click", () => {
+    // limpando o conteudo do right-side
+    rightSide.innerHTML = "";
 
-        const form = document.createElement("form");
-        form.method = "POST";
-        form.action = "cadastro.php";
+    // criando o formulário de login
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = "cadastro.php";
 
-        const labelEmail = document.createElement("label");
-        labelEmail.textContent = "Email:";
-        labelEmail.setAttribute("for", "email");
+    //input email
+    const labelEmail = document.createElement("label");
+    labelEmail.textContent = "Email:";
+    labelEmail.setAttribute("for", "email");
 
-        const inputEmail = document.createElement("input");
-        inputEmail.type = "email";
-        inputEmail.name = "emailStudent";
-        inputEmail.id = "email";
-        inputEmail.placeholder = "Digite seu e-mail";
+    const inputEmail = document.createElement("input");
+    inputEmail.type = "email";
+    inputEmail.name = "emailStudent";
+    inputEmail.id = "email";
+    inputEmail.placeholder = "Digite seu e-mail";
 
-        const labelSenha = document.createElement("label");
-        labelSenha.textContent = "Senha:";
-        labelSenha.setAttribute("for", "password");
+    //input senha
+    const labelSenha = document.createElement("label");
+    labelSenha.textContent = "Senha:";
+    labelSenha.setAttribute("for", "password");
 
-        const inputSenha = document.createElement("input");
-        inputSenha.type = "password";
-        inputSenha.name = "passwordStudent";
-        inputSenha.id = "password";
-        inputSenha.placeholder = "Digite sua senha";
+    const inputSenha = document.createElement("input");
+    inputSenha.type = "password";
+    inputSenha.name = "passwordStudent";
+    inputSenha.id = "password";
+    inputSenha.placeholder = "Digite sua senha";
 
-        const btnSubmit = document.createElement("button");
-        btnSubmit.type = "submit";
-        btnSubmit.textContent = "Entrar";
+    //botão submit
+    const btnSubmit = document.createElement("button");
+    btnSubmit.type = "submit";
+    btnSubmit.textContent = "Entrar";
 
-        form.append(
-            labelEmail, inputEmail, document.createElement("br"),
-            labelSenha, inputSenha, document.createElement("br"),
-            btnSubmit
-        );
+    // adicionando os elementos ao formulário
+    form.append(
+      labelEmail,
+      inputEmail,
+      document.createElement("br"),
+      labelSenha,
+      inputSenha,
+      document.createElement("br"),
+      btnSubmit
+    );
 
-        rightSide.append(form);
-    });
+    rightSide.append(form);
+  });
 }
-
 
 // FORMULÁRIO DE REGISTRO
 
 function registerUser() {
-    registerStudent.addEventListener('click', () => {
-        rightSide.innerHTML = "";
+  registerStudent.addEventListener("click", () => {
+    //limpando o conteudo do right-side
+    rightSide.innerHTML = "";
 
-        const form = document.createElement("form");
-        form.method = "POST";
-        form.action = "cadastro.php";
+    //criando o formulário de registro
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = "cadastro.php";
 
-        const labelEmail = document.createElement("label");
-        labelEmail.textContent = "Email:";
-        labelEmail.setAttribute("for", "email");
+    //input nome completo
+    const labelNameStudent = document.createElement("label");
+    labelNameStudent.textContent = "Nome Completo:";
+    labelNameStudent.setAttribute("for", "nameStudent");
 
-        const inputEmail = document.createElement("input");
-        inputEmail.type = "email";
-        inputEmail.name = "emailStudent";
-        inputEmail.id = "email";
-        inputEmail.placeholder = "Digite seu e-mail";
+    const nameStudent = document.createElement("input");
+    nameStudent.type = "text";
+    nameStudent.name = "nameStudent";
+    nameStudent.id = "nameStudent";
+    nameStudent.placeholder = "Digite seu nome completo";
 
-        const labelSenha = document.createElement("label");
-        labelSenha.textContent = "Senha:";
-        labelSenha.setAttribute("for", "password");
+    //input email
+    const labelEmail = document.createElement("label");
+    labelEmail.textContent = "Email:";
+    labelEmail.setAttribute("for", "email");
 
-        const inputSenha = document.createElement("input");
-        inputSenha.type = "password";
-        inputSenha.name = "passwordStudent";
-        inputSenha.id = "password";
-        inputSenha.placeholder = "Digite sua senha";
+    const inputEmail = document.createElement("input");
+    inputEmail.type = "email";
+    inputEmail.name = "emailStudent";
+    inputEmail.id = "email";
+    inputEmail.placeholder = "Digite seu e-mail";
 
-        const labelConfirm = document.createElement("label");
-        labelConfirm.textContent = "Confirmar senha:";
-        labelConfirm.setAttribute("for", "confirm");
+    //input senha
+    const labelSenha = document.createElement("label");
+    labelSenha.textContent = "Senha:";
+    labelSenha.setAttribute("for", "password");
 
-        const inputConfirm = document.createElement("input");
-        inputConfirm.type = "password";
-        inputConfirm.name = "confirmPassword";
-        inputConfirm.id = "confirm";
-        inputConfirm.placeholder = "Confirme sua senha";
+    const inputSenha = document.createElement("input");
+    inputSenha.type = "password";
+    inputSenha.name = "passwordStudent";
+    inputSenha.id = "password";
+    inputSenha.placeholder = "Digite sua senha";
 
-        const btnSubmit = document.createElement("button");
-        btnSubmit.type = "submit";
-        btnSubmit.textContent = "Registrar";
+    //input confirmar senha
+    const labelConfirm = document.createElement("label");
+    labelConfirm.textContent = "Confirmar senha:";
+    labelConfirm.setAttribute("for", "confirm");
 
-        form.append(
-            labelEmail, inputEmail, document.createElement("br"),
-            labelSenha, inputSenha, document.createElement("br"),
-            labelConfirm, inputConfirm, document.createElement("br"),
-            btnSubmit
-        );
+    const inputConfirm = document.createElement("input");
+    inputConfirm.type = "password";
+    inputConfirm.name = "confirmPassword";
+    inputConfirm.id = "confirm";
+    inputConfirm.placeholder = "Confirme sua senha";
 
-        rightSide.appendChild(form);
-    });
+    //botão submit
+    const btnSubmit = document.createElement("button");
+    btnSubmit.type = "submit";
+    btnSubmit.textContent = "Registrar";
+
+    //adicionando os elementos ao formulário
+    form.append(
+      labelNameStudent,
+      nameStudent,
+      labelEmail,
+      inputEmail,
+      document.createElement("br"),
+      labelSenha,
+      inputSenha,
+      document.createElement("br"),
+      labelConfirm,
+      inputConfirm,
+      document.createElement("br"),
+      btnSubmit
+    );
+
+    rightSide.appendChild(form);
+  });
 }
 
 // Inicializa os eventos
