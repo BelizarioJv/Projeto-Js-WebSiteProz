@@ -13,7 +13,7 @@ function getInUser() {
     // criando o formulário de login
     const form = document.createElement("form");
     form.method = "POST";
-    form.action = "cadastro.php";
+    form.action = "back-end/cadastro.php";
 
     //input email
     const labelEmail = document.createElement("label");
@@ -67,7 +67,7 @@ function registerUser() {
     //criando o formulário de registro
     const form = document.createElement("form");
     form.method = "POST";
-    form.action = "cadastro.php";
+    form.action = "back-end/register.php";
 
     //input nome completo
     const labelNameStudent = document.createElement("label");
@@ -79,6 +79,17 @@ function registerUser() {
     nameStudent.name = "nameStudent";
     nameStudent.id = "nameStudent";
     nameStudent.placeholder = "Digite seu nome completo";
+
+    //input curso do aluno
+    const labelCourse = document.createElement("label");
+    labelCourse.textContent = "Curso:";
+    labelCourse.setAttribute("for", "courseStudent");
+
+    const courseStudent = document.createElement("input");
+    courseStudent.type = "text";
+    courseStudent.name = "courseStudent";
+    courseStudent.id = "courseStudent";
+    courseStudent.placeholder = "Digite seu curso";
 
     //input email
     const labelEmail = document.createElement("label");
@@ -122,6 +133,8 @@ function registerUser() {
     form.append(
       labelNameStudent,
       nameStudent,
+      labelCourse,
+      courseStudent,
       labelEmail,
       inputEmail,
       document.createElement("br"),
@@ -138,6 +151,6 @@ function registerUser() {
   });
 }
 
-// Inicializa os eventos
+// Inicializa as funçoes
 getInUser();
 registerUser();
